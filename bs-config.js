@@ -27,7 +27,7 @@ module.exports = {
     "middleware": false,
     "serveStatic": [],
     "ghostMode": false,
-    "browser": ["chrome", "firefox", "edge", "ie"],
+    "browser": ["chrome", "firefox", "microsoft-edge"],
     "startPath": "app\\grocery-list.html",
     "minify": true
 };
