@@ -23,6 +23,7 @@
 		let groceries = JSON.parse(data);
 		let groceryListElem = document.querySelectorAll(".grocery-list")[0];
 
+		//	Add the template to the DOM.
 		for (item of groceries) {
 			let elem = createTemplate(item);
 
@@ -30,6 +31,7 @@
 		}
 	}
 
+	//	Find the template in the document and cache it for faster access in the future.
 	function loadTemplate(templateName) {
 		return templateCache[templateName] = templateCache[templateName] || document.getElementById(templateName);
 	}
@@ -50,25 +52,11 @@
 						.replace(/{{item}}/g, item.item)
 						.replace(/{{qty}}/g, item.qty)
 						.replace(/{{type}}/g, item.type);
-			
 			clone.children[0].innerHTML = html;
 
-			//return elem;
 			return clone.children[0];
 		} else {
-			// Find another way to add the rows to the table because 
-			// the HTML template element is not supported.
-			let html = tmpl.innerHTML
-
-			//	brand, category, item, qty, type
-			html = html.replace(/{{brand}}/g, item.brand)
-						.replace(/{{category}}/g, item.category)
-						.replace(/{{item}}/g, item.item)
-						.replace(/{{qty}}/g, item.qty)
-						.replace(/{{type}}/g, item.type);
-			
-			let elem = new HTMLDivElement();
-			elem.outerHTML = html;
+			//	HTML template element is not supported.
 		}
 	}
 

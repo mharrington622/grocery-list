@@ -1,29 +1,76 @@
 * {
   box-sizing: border-box; }
 
+/* Remove default padding */
 html, body {
-  padding: 0; }
+  width: 100%;
+  padding: 0;
+  font-family: Arial;
+  /*font-size: 16px;*/
+  line-height: 1.5em; }
+
+.screen-reader {
+  position: absolute;
+  top: -500px; }
 
 .grocery-item {
+  width: calc(100% / 4 - 1em);
+  height: 200px;
+  padding: 0.5em;
   background-color: #FFF4D5;
   border-right: solid 3px #E17055;
-  border-bottom: solid 3px #E17055; }
+  border-bottom: solid 3px #E17055;
+  margin: 0 1em 1em 0;
+  margin-bottom: 1em;
+  position: relative;
+  vertical-align: bottom; }
 
-h1 {
+/* Item template Category label */
+.category-label {
+  color: #E17055;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em; }
+
+/* Item template Quantity label */
+.qty-label {
+  color: #E17055;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em; }
+
+h1, h2 {
   font-family: Arial;
   font-weight: bold;
-  font-size: 36px; }
+  font-size: 2.25em;
+  /* 16 * 2.25 = 36px */ }
 
+/* Style for the entire list - using flexbox */
+.grocery-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center; }
+
+/* Device sizing */
+/* Small Device */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   body {
-    padding: 10px 0; } }
+    padding: 10px 0; }
+  /* We want the item to stretch to full width */
+  .grocery-item {
+    width: 100%; } }
 
+/* Medium Device */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     padding: 15px 0; } }
 
+/* Large Device */
 @media screen and (min-width: 1025px) {
-  html {
-    align-content: center; }
   body {
+    margin: 0 auto;
+    /* Keep content centered */
     width: 980px; } }

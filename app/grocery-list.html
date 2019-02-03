@@ -7,8 +7,11 @@
 <body>
 	<template id="groceryItemTmpl">
 		<div class="grocery-item">
-			<div>{{category}}</div>
-			<div>{{item}}</div>
+			<h2>{{item}}</h2>
+			<div class="qty-label">QTY: {{qty}}</div>
+			<hr/>
+			<div class="screen-reader">Description:</div><div>{{brand}} {{type}}</div>
+			<div class="screen-reader">Category:</div><div class="category-label">{{category}}</div>
 		</div>
 	</template>
 
