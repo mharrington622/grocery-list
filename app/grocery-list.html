@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
-	<head>
-		<link rel="stylesheet" href="style.css" />
-		<script type="text/javascript"></script>
-	</head>
+<head>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script type="text/javascript" src=grocery-list.js></script>
+</head>
 <body>
-	<script type="template" id="itemTmpl">
+	<template id="groceryItemTmpl">
 		<div class="grocery-item">
-
+			<div>{{category}}</div>
+			<div>{{item}}</div>
 		</div>
-	</script>
+	</template>
 
 	<h1>Grocery List</h1>
 
-	<ul class="list">
-
-	</ul>
+	<div class="grocery-list">
+	</div>
 </body>
 </html>
