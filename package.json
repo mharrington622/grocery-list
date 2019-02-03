@@ -1,0 +1,24 @@
+{
+  "name": "grocery-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start -c bs-config.js",
+    "build:sass": "node-sass --include-path scss app/styles/scss/main.scss   app/styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mharrington622/grocery-list.git"
+  },
+  "author": "Michael Harrington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mharrington622/grocery-list/issues"
+  },
+  "homepage": "https://github.com/mharrington622/grocery-list#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.11.0"
+  }
+}

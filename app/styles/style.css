@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0; }
+
+.grocery-item {
+  background-color: #FFF4D5;
+  border-right: solid 3px #E17055;
+  border-bottom: solid 3px #E17055; }
+
+h1 {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 36px; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    padding: 10px 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 15px 0; } }
+
+@media screen and (min-width: 1025px) {
+  html {
+    align-content: center; }
+  body {
+    width: 980px; } }

@@ -1,0 +1,42 @@
+$background-color: #FFF4D5;
+$accent-color: #E17055;
+$text-color: #2C3A47;
+
+*
+{
+	box-sizing: border-box;
+}
+
+html,body
+{
+	padding: 0;
+}
+
+.grocery-item
+{
+	background-color: $background-color;
+	border-right: solid 3px $accent-color;
+	border-bottom: solid 3px $accent-color;
+}
+
+h1
+{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+	@import "./small-device.scss";
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+	@import "./medium-device.scss";
+}
+
+@media screen and (min-width: 1025px)
+{
+	@import "./large-device.scss";
+}
